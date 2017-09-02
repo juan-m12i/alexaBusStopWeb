@@ -1,3 +1,7 @@
+cfg = {
+  "embedGmapKey" : "AIzaSyAquTlXePfkMLhiegBr4EiCO9F7iyl58Hc"
+}
+
 function voidFn() {
   "use strict";
   console.log("void");
@@ -54,6 +58,9 @@ function process_geolocation(ret) {
     (ret) => process_stops(ret),
     (err) => logFn(err)
     );
+  let iframe = create_iframe(gmap_url(cfg.embedGmapKey, loc.lat, loc.lng));
+  let div = document.getElementById("map");
+  div.appendChild(iframe);
 }
 
 function process_stops(ret) {
@@ -88,4 +95,27 @@ function line_to_li(line) {
   let li = document.createElement("li");
   li.textContent = line.name;
   return li;
+}
+
+
+
+function gmap_url(key, lat, lng, zoom = 14, maptype = "roadmap",query = "") {
+  url = encodeURI(
+    "https://www.google.com/maps/view/v1/search?"
+    .concat("key=" + key)
+    .concat("&center=" + lat + "," + lng)
+    .concat("&zoom=" + zoom)
+    .concat("&maptype=" + maptype)
+    )
+  return url
+}
+
+function create_iframe(src, width = 450, height = 450, frameborder="0", style="border:0") {
+  let iframe = document.createElement("IFRAME");
+  iframe.width = width
+  iframe.height = height
+  iframe.frameborder = frameborder
+  iframe.style = style
+  iframe.src = src
+  return iframe
 }
