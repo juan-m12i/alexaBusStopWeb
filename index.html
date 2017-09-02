@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Alexa Bus set bus stop and lines</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="easy-http.js" defer></script>
+    <script src="wrap_http.js" defer></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR9Ciiga6WiScmWiiw8S9p_vUCDzAamIM&callback=initMap"
+    async defer></script> -->
+  </head>
+  <body>
+  	<div id="sessionValidator">
+		  Insert 6 digit code: <input id="code" type="text" name="code">
+		 <button type="button" onclick="validate_code()">Validate</button>
+</form>
+  	</div>
+  	<div id="mainBlock">
+  		<span>
+  			<div>
+				Search for your stop <input id="address" type="text" name="code">
+				<button type="button" onclick="search_address()">Go</button>
+  			</div>
+  			<div id="busStops">
+  				Stops will be hear
+  			</div>
+  		</span>
+  		<span>
+  			<div>
+  				MAP will be here
+			</div>
+  		</span>
+  	</div>
+    <!-- page content -->
+  </body>
+
+ <!---
+  <div class="expanded-result-details">
+<a href="javascript:void(0);">
+<div class="nearby-mode-details">
+<span class="nearby-list-heading">Camden Town Station / Bayham Street</span>
+<h4 class="visually-hidden">Bus routes</h4>
+<ul class="nearby-list-information">
+<li class="bus-route">168</li>
+<li class="bus-route">214</li>
+<li class="bus-route">253</li>
+<li class="bus-route">274</li>
+<li class="bus-route">C2</li>
+</ul>
+</div>
+<div class="nearby-mode-information">
+<span class="mode-icon blank-bus-stop-icon"><span class="visually-hidden">Bus stop </span>T</span>
+</div>
+</a>
+</div>
+-->
+</html>
