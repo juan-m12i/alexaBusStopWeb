@@ -58,9 +58,9 @@ function process_geolocation(ret) {
     (ret) => process_stops(ret),
     (err) => logFn(err)
     );
-  let iframe = create_iframe(gmap_url(cfg.embedGmapKey, loc.lat, loc.lng));
-  let div = document.getElementById("map");
-  div.appendChild(iframe);
+  //let iframe = create_iframe(gmap_url(cfg.embedGmapKey, loc.lat, loc.lng));
+  //let div = document.getElementById("map");
+  //div.appendChild(iframe);
 }
 
 function process_stops(ret) {
@@ -98,7 +98,7 @@ function line_to_li(line) {
 }
 
 
-
+/*
 function gmap_url(key, lat, lng, zoom = 14, maptype = "roadmap",query = "") {
   url = encodeURI(
     "https://www.google.com/maps/view/v1/search?"
@@ -119,3 +119,4 @@ function create_iframe(src, width = 450, height = 450, frameborder="0", style="b
   iframe.src = src
   return iframe
 }
+*/
