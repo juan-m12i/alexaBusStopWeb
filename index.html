@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Alexa Bus set bus stop and lines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
     <script src="script.js" defer></script>
     <script src="easy-http.js" defer></script>
     <script src="wrap_http.js" defer></script>
@@ -11,27 +15,30 @@
     async defer></script> -->
   </head>
   <body>
-  	<div id="sessionValidator">
-		  Insert 6 digit code: <input id="code" type="text" name="code">
-		 <button type="button" onclick="validate_code()">Validate</button>
-</form>
-  	</div>
-  	<div id="mainBlock">
-  		<span>
-  			<div>
-				Search for your stop <input id="address" type="text" name="code">
-				<button type="button" onclick="search_address()">Go</button>
-  			</div>
-  			<div id="busStops">
-  				Stops will be hear
-  			</div>
-  		</span>
-  		<span>
-  			<div>
-  				MAP will be here
-			</div>
-  		</span>
-  	</div>
+    <div class="container">
+      <div id="sessionValidator" class="row">
+        <div class="twelve columns">
+          <h6>Insert 6 digit code:<input id="code" type="text" name="code">
+          <button type="button" onclick="validate_code()">Validate</button></h6>
+        </div>
+      </div>
+      <div id="mainBlock" class="row">
+        <div class="three columns">
+          <div>
+            Search for your stop <input id="address" type="text" name="code">
+            <button type="button" onclick="search_address()">Go</button>
+          </div>
+          <div id="busStops">
+            Stops will be here
+          </div>
+        </div>
+        <div class="nine columns">
+          <div>
+            MAP will be here
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- page content -->
   </body>
 
