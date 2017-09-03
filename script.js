@@ -98,6 +98,17 @@ function line_to_li(line) {
 }
 
 
+
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+
 /*
 function gmap_url(key, lat, lng, zoom = 14, maptype = "roadmap",query = "") {
   url = encodeURI(
